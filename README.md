@@ -2,7 +2,7 @@
 
 ## Alphabet Soup Problem - Create a function that takes a string and returns a string with its letters in alphabetical order
 
-//Sort the text
+//Sorts the text alphabetically
     
     def alphabet_soup(word):
     letters = list(word)
@@ -14,7 +14,7 @@
 
     return result
     
-//print text
+//prints the text alphabetically
 
     print(alphabet_soup("hello"))
     print(alphabet_soup("hacker"))
@@ -24,7 +24,7 @@
     def emotify(sentence):
     words = sentence.split()
 
-//Use if, elif, and else statement to align the word and emoticon
+//Use if, elif, and else statement to align the word and assigned emoticon
 
     for e in range(len(words)):
         if words[e] == "smile":
@@ -52,7 +52,7 @@
 
 ## Unpacking List Problem - Unpack the list writeyourcodehere into three variables, being first, middle, and last, with middle being everything in between the first and last element.
 
-//define the list
+//define the list for first, last, and middle
 
     def unpacking_list(ulp):
     first = ulp[0]

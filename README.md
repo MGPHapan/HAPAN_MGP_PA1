@@ -1,7 +1,9 @@
 # HAPAN_MGP_PA1
 
-##Alphabet Soup Problem
-def alphabet_soup(word):
+## Alphabet Soup Problem - Create a function that takes a string and returns a string with its letters in alphabetical order
+
+//Sorting the text
+    def alphabet_soup(word):
     letters = list(word)
     letters.sort()
     
@@ -10,13 +12,18 @@ def alphabet_soup(word):
         result = result + als
 
     return result
+    
+//print text
 
-print(alphabet_soup("hello"))
-print(alphabet_soup("hacker"))
+    print(alphabet_soup("hello"))
+    print(alphabet_soup("hacker"))
 
-##Emoticon Problem
-def emotify(sentence):
+## Emoticon Problem - Create a function that changes specific words into emoticons.
+
+    def emotify(sentence):
     words = sentence.split()
+
+//Use if, elif, and else statement to align the word and emoticon
 
     for e in range(len(words)):
         if words[e] == "smile":
@@ -37,8 +44,27 @@ def emotify(sentence):
             
     return result
 
-print(emotify("Make me smile"))
-print(emotify("I am mad"))
+//Print given phrase as the word will be emoticon
 
-##Unpacking List Problem
+    print(emotify("Make me smile"))
+    print(emotify("I am mad"))
 
+## Unpacking List Problem - Unpack the list writeyourcodehere into three variables, being first, middle, and last, with middle being everything in between the first and last element.
+
+//define the list
+
+    def unpacking_list(ulp):
+    first = ulp[0]
+    last = ulp[-1]
+    middle = []
+
+    for n in range(1, len(ulp)-1):
+        middle.append(ulp[n])
+
+//Create automated phase then add the variable you use for printing
+
+    print("first:", first)
+    print("middle:", middle)
+    print("last:", last)
+
+    unpacking_list([1,2,3,4,5,6])

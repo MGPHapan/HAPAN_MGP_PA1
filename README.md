@@ -2,7 +2,8 @@
 
 ## Alphabet Soup Problem - Create a function that takes a string and returns a string with its letters in alphabetical order
 
-//Sorting the text
+//Sort the text
+    
     def alphabet_soup(word):
     letters = list(word)
     letters.sort()
@@ -44,7 +45,7 @@
             
     return result
 
-//Print given phrase as the word will be emoticon
+//Print given phrase which will result as word to the assigned emoticon
 
     print(emotify("Make me smile"))
     print(emotify("I am mad"))
@@ -61,7 +62,7 @@
     for n in range(1, len(ulp)-1):
         middle.append(ulp[n])
 
-//Create automated phase then add the variable you use for printing
+//Create automated phase then add the variable for printing
 
     print("first:", first)
     print("middle:", middle)

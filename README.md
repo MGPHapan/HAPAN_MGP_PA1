@@ -1,71 +1,84 @@
 # HAPAN_MGP_PA1
 
-## Alphabet Soup Problem - Create a function that takes a string and returns a string with its letters in alphabetical order
+## Alphabet Soup Problem
 
-//Sorts the text alphabetically
-    
-    def alphabet_soup(word):
-    letters = list(word)
-    letters.sort()
-    
-    result = " "
-    for als in letters:
-        result = result + als
+**We need a function that takes a string and returns the letters in alphabetical order.**
+- We need to convert the string into a list of letters so we can sort them.
+- We use .sort() to arrange the letters alphabetically.
+- We use a for loop to join the sorted letters back into a single string.
+- Output: The function returns the given word with letters arranged alphabetically.
 
-    return result
-    
-//prints the text alphabetically
+```Python
+def alphabet_soup(word):
+    letters = list(word)       # Convert the string into a list of characters
+    letters.sort()             # Sort the letters alphabetically
 
-    print(alphabet_soup("hello"))
-    print(alphabet_soup("hacker"))
+    result = ""                # Create an empty string to store the result
+    for als in letters:        # Loop through each letter in the sorted list
+        result = result + als  # Add each letter to the result string
 
-## Emoticon Problem - Create a function that changes specific words into emoticons.
+    return result              # Return the final alphabetized string
 
-    def emotify(sentence):
-    words = sentence.split()
+print(alphabet_soup("hello"))  # Output: 'ehllo'
+print(alphabet_soup("hacker")) # Output: 'acehkr'
+```
 
-//Use if, elif, and else statement to align the word and assigned emoticon
+## Emoticon Problem 
 
-    for e in range(len(words)):
-        if words[e] == "smile":
+**We need a function that converts certain keywords into emoticons.**
+- We use .split() to break the sentence into words.
+- We use if-elif-else to replace specific words with assigned emoticons.
+- We use a loop to rebuild the sentence with updated words.
+- Output: A sentence where words like "smile" or "mad" are replaced with their corresponding emoticons.
+
+```Python
+def emotify(sentence):
+    words = sentence.split()           # Split the sentence into words
+
+    for e in range(len(words)):        # Loop through each word
+        if words[e] == "smile":        # Replace "smile" with :)
             words[e] = ":)"
-        elif words[e] == "grin":
+        elif words[e] == "grin":       # Replace "grin" with :D
             words[e] = ":D"
-        elif words[e] == "sad":
+        elif words[e] == "sad":        # Replace "sad" with :((
             words[e] = ":(("
-        elif words[e] == "mad":
-            words [e] = ">:("
+        elif words[e] == "mad":        # Replace "mad" with >:(
+            words[e] = ">:("
 
-    result = " "
+    result = " "                       # Rebuild the sentence with spaces
     for e in range(len(words)):
         if e == 0:
             result = words[e]
         else:
             result = result + " " + words[e]
             
-    return result
+    return result                      # Return the updated sentence
 
-//Print given phrase which will result as word to the assigned emoticon
+print(emotify("Make me smile"))        # Output: "Make me :)"
+print(emotify("I am mad"))             # Output: "I am >:("
+```
 
-    print(emotify("Make me smile"))
-    print(emotify("I am mad"))
+## Unpacking List Problem
 
-## Unpacking List Problem - Unpack the list writeyourcodehere into three variables, being first, middle, and last, with middle being everything in between the first and last element.
+**We need to unpack a list into three parts: first, middle, and last.**
+- We use indexing to get the first and last elements.
+- We use a for loop to collect all middle elements.
+- We print the three parts separately.
+- Output: Displays the first, middle, and last values from the list.
+```Python
+def unpacking_list(ulp):
+    first = ulp[0]                 # Get the first element
+    last = ulp[-1]                 # Get the last element
+    middle = []                    # Initialize an empty list for middle elements
 
-//define the list for first, last, and middle
+    for n in range(1, len(ulp)-1): # Loop from the 2nd element to the 2nd-to-last
+        middle.append(ulp[n])      # Add each middle element to the list
 
-    def unpacking_list(ulp):
-    first = ulp[0]
-    last = ulp[-1]
-    middle = []
+    print("first:", first)         # Display the first element
+    print("middle:", middle)       # Display all middle elements
+    print("last:", last)           # Display the last element
 
-    for n in range(1, len(ulp)-1):
-        middle.append(ulp[n])
+unpacking_list([1,2,3,4,5,6])
+```
 
-//Create automated phase then add the variable for printing
-
-    print("first:", first)
-    print("middle:", middle)
-    print("last:", last)
-
-    unpacking_list([1,2,3,4,5,6])
+VERSION 2
